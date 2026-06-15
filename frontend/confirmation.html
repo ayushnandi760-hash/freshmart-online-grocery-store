@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmed — FreshMart</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  
+  <div class="confirmation-page">
+    <div class="confirmation-card" id="conf-card" style="display: none;">
+      
+      <!-- Animated Checkmark -->
+      <div class="success-check">
+        <svg viewBox="0 0 24 24">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <h1>Order Confirmed!</h1>
+      <p class="conf-sub">Thank you, <span id="conf-name">Customer</span>! Your order has been placed successfully.</p>
+
+      <div class="conf-details">
+        <div class="conf-row">
+          <span class="label">Order ID:</span>
+          <span class="value" id="conf-id">#000</span>
+        </div>
+        <div class="conf-row">
+          <span class="label">Payment:</span>
+          <span class="value">Cash on Delivery</span>
+        </div>
+        <div class="conf-row">
+          <span class="label">Delivery To:</span>
+          <span class="value" id="conf-address" style="text-align: right; max-width: 60%;">Address</span>
+        </div>
+      </div>
+
+      <div class="conf-items">
+        <h3>Items Ordered</h3>
+        <div id="conf-items-list">
+          <!-- Injected via JS -->
+        </div>
+        
+        <div class="conf-total">
+          <span>Total Amount</span>
+          <span class="value">₹<span id="conf-total">0.00</span></span>
+        </div>
+      </div>
+
+      <p style="font-size: 13px; color: var(--gray-500); margin-bottom: 24px;">A confirmation email has been sent to your registered email address.</p>
+
+      <a href="/index.html" class="continue-btn">
+        Continue Shopping 🛍️
+      </a>
+    </div>
+
+    <!-- Error State -->
+    <div id="conf-error" class="cart-empty" style="display: none; background: white; padding: 40px; border-radius: 20px;">
+      <div class="empty-icon">⚠️</div>
+      <h2>No recent orders found</h2>
+      <button class="nav-btn nav-btn-primary" onclick="window.location.href='/'">Go to Home</button>
+    </div>
+  </div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/confirmation.js"></script>
+</body>
+</html>

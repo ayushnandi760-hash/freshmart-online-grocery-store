@@ -1,0 +1,4 @@
+# FreshMart Backend
+
+node_modules/
+.env

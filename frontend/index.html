@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshMart — Fresh Groceries Delivered</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  
+  <!-- Hero Section -->
+  <section class="hero" id="hero-section">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">🚀 Delivery in 15 Minutes</div>
+        <h1>Fresh Groceries, <br><span>Right to Your Door.</span></h1>
+        <p>Get farm-fresh vegetables, dairy, and daily essentials delivered at lightning speed. Quality guaranteed on every order.</p>
+        <a href="#products-section" class="hero-cta">
+          Shop Now 🛍️
+        </a>
+      </div>
+      <div class="hero-image">
+        🛒
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="container">
+    
+    <!-- Search Results Header (Hidden by default) -->
+    <div id="search-header" class="section-header" style="display: none;">
+      <div>
+        <h2 class="section-title">Search Results</h2>
+        <p class="section-subtitle" id="search-subtitle">Showing results for "..."</p>
+      </div>
+      <button class="nav-btn nav-btn-outline" onclick="window.location.href='/'">Clear Search</button>
+    </div>
+
+    <!-- Categories Section -->
+    <section class="categories-section" id="categories-section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Shop by Category</h2>
+          <p class="section-subtitle">Fresh picks for you today</p>
+        </div>
+      </div>
+      
+      <!-- Category Pills Container -->
+      <div class="categories-scroll" id="categories-container">
+        <!-- Injected via JS -->
+      </div>
+    </section>
+
+    <!-- Products Grid Section -->
+    <section class="products-section" id="products-section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title" id="products-title">All Products</h2>
+          <p class="section-subtitle">Explore our wide range of groceries</p>
+        </div>
+      </div>
+
+      <!-- Loading State -->
+      <div id="products-loader" class="loader">
+        <div class="spinner"></div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="products-grid">
+        <!-- Injected via JS -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="products-empty" class="cart-empty" style="display: none;">
+        <div class="empty-icon">🔍</div>
+        <h2>No products found</h2>
+        <p>Try searching for something else or clearing filters.</p>
+        <button class="nav-btn nav-btn-primary" onclick="window.location.href='/'">View All Products</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>🥬 FreshMart</h3>
+          <p>Your premium neighborhood grocery delivery app. Farm-fresh quality, delivered in 15 minutes.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="/">Home</a>
+          <a href="/cart.html">Cart</a>
+          <a href="/login.html">Login</a>
+        </div>
+        <div class="footer-links">
+          <h4>Categories</h4>
+          <a href="/?category=Vegetables">Vegetables</a>
+          <a href="/?category=Fruits">Fruits</a>
+          <a href="/?category=Dairy">Dairy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 FreshMart. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/api.js"></script>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/home.js"></script>
+</body>
+</html>

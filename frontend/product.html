@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details — FreshMart</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  
+  <main class="container">
+    <div id="product-loader" class="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <div id="product-detail-container" style="display: none;">
+      <div class="product-detail">
+        <a href="javascript:history.back()" class="back-link">
+          <span>←</span> Back to products
+        </a>
+        
+        <div class="product-detail-card" id="product-card-inner">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+    </div>
+    
+    <div id="product-error" class="cart-empty" style="display: none;">
+      <div class="empty-icon">⚠️</div>
+      <h2>Product not found</h2>
+      <p>The product you're looking for might have been removed or is temporarily unavailable.</p>
+      <button class="nav-btn nav-btn-primary" onclick="window.location.href='/'">Return Home</button>
+    </div>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/product.js"></script>
+</body>
+</html>

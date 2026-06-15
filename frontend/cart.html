@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart — FreshMart</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  
+  <main class="container cart-page">
+    <h1>Your Cart</h1>
+
+    <div id="cart-loader" class="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Empty State -->
+    <div id="cart-empty" class="cart-empty" style="display: none;">
+      <div class="empty-icon">🛒</div>
+      <h2>Your cart is empty</h2>
+      <p>Looks like you haven't added any items to your cart yet.</p>
+      <button class="nav-btn nav-btn-primary" onclick="window.location.href='/index.html'">Start Shopping</button>
+    </div>
+
+    <!-- Filled State -->
+    <div id="cart-content" style="display: none;">
+      <div class="checkout-grid" style="grid-template-columns: 1fr 340px;">
+        
+        <!-- Cart Items List -->
+        <div class="cart-items" id="cart-items-container">
+          <!-- Injected via JS -->
+        </div>
+
+        <!-- Order Summary Sidebar -->
+        <div class="order-summary-card">
+          <h2>Order Summary</h2>
+          
+          <div class="cart-summary-row">
+            <span>Item Total (<span id="summary-count">0</span>)</span>
+            <span>₹<span id="summary-subtotal">0.00</span></span>
+          </div>
+          <div class="cart-summary-row">
+            <span>Delivery Fee</span>
+            <span style="color: var(--green-600);">FREE</span>
+          </div>
+          
+          <div class="cart-summary-row total">
+            <span>To Pay</span>
+            <span>₹<span id="summary-total">0.00</span></span>
+          </div>
+
+          <button class="checkout-btn" onclick="window.location.href='/checkout.html'">
+            Proceed to Checkout
+          </button>
+        </div>
+        
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/cart.js"></script>
+</body>
+</html>
